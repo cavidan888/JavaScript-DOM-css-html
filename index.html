@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript DOM</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+		var divo = {
+			width:"width:400px;",
+			height:"height:350px;",
+			background:"background:red;",
+			border:"border:1px solid black;",
+			textalign:"text-align:center;",
+			lineHeight:"line-height:300px;",
+			fontFamily:"font-family:sans-serif;",
+			fontSize:"font-size:20px;",
+			fontWeight:"font-weight:bold;",
+			color:"color:aqua;",
+			backImage:"background:url(https://pbs.twimg.com/profile_images/852874627181367297/BhCGvY6d_400x400.jpg);",
+			backRepeat:"background-repeat:no-repeat;",
+			background:"background-size:cover;",
+			brigthness:"brightness(50%);",
+			
+		}
+		
+		var styleProperty = "";
+		
+		for(var property in divo){
+		
+		styleProperty  += divo[property];
+		}
+		function createMyDiv(objectim){
+		
+		var elem = document.createElement('div');
+		var p = document.createElement('p');
+		p.innerHTML = "Hello JavaScript";
+		var a = elem.setAttribute("style",styleProperty);
+		
+		elem.appendChild(p);
+		document.body.appendChild(elem);
+		
+		}
+		createMyDiv(divo);
+</script>
+</body>
+</html>
